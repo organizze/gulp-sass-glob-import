@@ -2,14 +2,16 @@ var expect = require('expect.js');
 var vinyl = require('vinyl-fs');
 var bulkSass = require('..');
 var fs = require('fs');
+var nodeSass = require('gulp-sass');
 
-describe('gulp-sass-glob-import', function() {
+
+describe('gulp-sass-bulk-import', function() {
 
 
     it('should parse a single directory', function(done) {
 
-        var equalString = '@import "import-folder/_f1.scss' + '";\n';
-        equalString += '@import "import-folder/_f2.scss' + '";\n';
+        var equalString = '@import "import-folder/_f1.scss";\n';
+        equalString += '@import "import-folder/_f2.scss";\n';
 
         vinyl
             .src(__dirname + '/test-scss/app.scss')
@@ -25,10 +27,9 @@ describe('gulp-sass-glob-import', function() {
 
     it('should parse a directory recursively', function(done) {
 
-
-        var equalString = '@import "recursive-folder/_f1.scss' + '";\n';
-        equalString += '@import "recursive-folder/_f2.scss' + '";\n';
-        equalString += '@import "recursive-folder/nested-folder/_f3.scss' + '";\n';
+        var equalString = '@import "recursive-folder/_f1.scss";\n';
+        equalString += '@import "recursive-folder/_f2.scss";\n';
+        equalString += '@import "recursive-folder/nested-folder/_f3.scss";\n';
 
         vinyl
             .src(__dirname + '/test-scss/recursive.scss')
@@ -40,5 +41,17 @@ describe('gulp-sass-glob-import', function() {
                 done();
             });
     });
+
+    it('should not fail when parsed with node-sass', function(done) {
+        vinyl
+            .src(__dirname + '/test-scss/app.scss')
+            .pipe(bulkSass())
+            .pipe(nodeSass())
+            .on('end', function() {
+                done();
+            });
+    });
+
+
 
 });
