@@ -29,7 +29,6 @@ module.exports = function() {
 
             files.forEach(function(filename){
                 // check if it is a sass file
-                // TODO allow .sass also
                 if (path.extname(filename).toLowerCase() == '.scss') {
                     // we remove the parent file base path from the path we will output
                     filename = path.normalize(filename);
