@@ -13,8 +13,7 @@ module.exports = function() {
         var contents = file.contents.toString('utf-8');
 
         // regex to match an @import that contains glob pattern
-        // TODO allow for .sass and support single quote in case some madman prefer them in his css
-        var reg = /@import\s+"([^"]+\*(\.scss)?)";/;
+        var reg = /@import\s+["']([^"']+\*(\.scss)?)["'];?/;
         var result;
 
         while((result = reg.exec(contents)) !== null) {
