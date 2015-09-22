@@ -1,13 +1,13 @@
-gulp-sass-bulk-import
+gulp-sass-glob-import
 =====================
 
-gulp task to allow importing directories in your SCSS
+gulp task to allow importing directories in your SCSS. Different from [gulp-sass-bulk-import](https://github.com/mathisonian/gulp-sass-bulk-import) in that I needed the output to not include the absolute path.
 
 
 ## installation
 
 ```
-npm install --save-dev gulp-sass-bulk-import
+npm install --save-dev gulp-sass-glob-import
 ```
 
 
