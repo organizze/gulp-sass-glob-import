@@ -1,7 +1,9 @@
 gulp-sass-glob-import
 =====================
 
-gulp task to allow importing directories in your SCSS. Different from [gulp-sass-bulk-import](https://github.com/mathisonian/gulp-sass-bulk-import) in that I needed the output to not include the absolute path.
+gulp task to allow importing directories in your SCSS.
+
+Different from [gulp-sass-bulk-import](https://github.com/mathisonian/gulp-sass-bulk-import) in that I needed the output to not include the absolute path. Also using `Globs` for more flexibility.
 
 
 ## installation
