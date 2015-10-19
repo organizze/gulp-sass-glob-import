@@ -32,7 +32,7 @@ npm install --save-dev gulp-sass-glob-import
 #### in your gulpfile
 
 ```js
-var bulkSass = require('gulp-sass-bulk-import');
+var bulkSass = require('gulp-sass-glob-import');
 
 gulp.task('css', function() {
     return gulp
