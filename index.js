@@ -13,7 +13,7 @@ module.exports = function() {
         var contents = file.contents.toString('utf-8');
 
         // regex to match an @import that contains glob pattern
-        var reg = /@import\s+["']([^"']+\*(\.scss)?)["'];?/;
+        var reg = /@import\s+\S([^"']*\*(\.scss)?)["'];?/;
         var result;
 
         while((result = reg.exec(contents)) !== null) {
@@ -22,16 +22,15 @@ module.exports = function() {
             var globPattern = result[1];
             var imports = [];
 
-            var files = glob.sync(path.join(file.base, globPattern), {
+
+            var files = glob.sync(path.join(path.dirname(file.path), globPattern), {
                 cwd: file.base
             });
 
-            files.forEach(function(filename){
-                // check if it is a sass file
-                if (path.extname(filename).toLowerCase() == '.scss') {
-                    // we remove the parent file base path from the path we will output
+            files.forEach(function(filename) {
+                if ((file.path != filename) && (path.extname(filename).toLowerCase() == '.scss')) {
                     filename = path.normalize(filename);
-                    var base = path.join(path.normalize(file.base), '/');
+                    var base = path.join(path.normalize(path.dirname(file.path)), '/');
 
                     filename = filename.replace(base, '');
                     imports.push('@import "' + slash(filename) + '";');

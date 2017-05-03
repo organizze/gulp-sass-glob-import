@@ -1,10 +1,10 @@
-gulp-sass-glob-import
-=====================
+organizze-gulp-sass-bulk-import
+===============================
 
-gulp task to allow importing directories in your SCSS.
+Modified gulp-sass-bulk-import original code in 2 aspects.
 
-Different from [gulp-sass-bulk-import](https://github.com/mathisonian/gulp-sass-bulk-import) in that I needed the output to not include the absolute path. Also using `Globs` for more flexibility.
-
+1 - Converting @import paths to a relative path.
+2 - Added support for general ```@import '*'``` rule that will fetch all files from the same dir ignoring only the calling file.
 
 ## installation
 

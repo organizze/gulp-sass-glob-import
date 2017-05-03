@@ -1,5 +1,5 @@
 {
-  "name": "gulp-sass-glob-import",
+  "name": "organizze-gulp-sass-glob-import",
   "version": "0.1.0",
   "description": "import directories in your SCSS",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:bleuarg/gulp-sass-glob-import.git"
+    "url": "git@github.com:organizze/organizze-gulp-sass-bulk-import.git"
   },
   "keywords": [
     "gulpplugin",
@@ -21,12 +21,12 @@
     "import",
     "sass"
   ],
-  "author": "Patrick Davies",
+  "author": "Felipe Luz",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bleuarg/gulp-sass-glob-import/issues"
+    "url": "https://github.com/organizze/organizze-gulp-sass-bulk-import/issues"
   },
-  "homepage": "https://github.com/bleuarg/gulp-sass-glob-import",
+  "homepage": "https://github.com/organizze/organizze-gulp-sass-bulk-import",
   "dependencies": {
     "glob": "^4.5.3",
     "slash": "^1.0.0",
