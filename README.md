@@ -4,6 +4,7 @@ organizze-gulp-sass-bulk-import
 Modified gulp-sass-bulk-import original code in 2 aspects.
 
 1 - Converting @import paths to a relative path.
+
 2 - Added support for general ```@import '*'``` rule that will fetch all files from the same dir ignoring only the calling file.
 
 ## installation
