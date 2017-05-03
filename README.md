@@ -10,7 +10,7 @@ Modified ```gulp-sass-bulk-import``` original code in 2 aspects.
 ## installation
 
 ```
-npm install --save-dev gulp-sass-glob-import
+npm install --save-dev organizze-gulp-sass-bulk-import
 ```
 
 
@@ -33,7 +33,7 @@ npm install --save-dev gulp-sass-glob-import
 #### in your gulpfile
 
 ```js
-var bulkSass = require('gulp-sass-glob-import');
+var bulkSass = require('organizze-gulp-sass-bulk-import');
 
 gulp.task('css', function() {
     return gulp
